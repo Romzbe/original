@@ -1,0 +1,25 @@
+{%extends 'popo/lox.html'%}
+
+{%block tit%}ЗаплОти потом добавь{%endblock%}
+
+{%block con%}
+<div class="features">
+    <h1> Добавить статью </h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.title }}<br> <br>
+        {{ form.anons }}<br><br>
+        {{ form.text }}<br><br>
+        {{ form.date }}<br><br>
+        <span>{{er}}</span>
+<!--        <input type="text" placeholder="Nazvanie" class="from-control"><br>-->
+<!--        <input type="text" placeholder="Anons" class="from-control"><br>-->
+<!--        <textarea class="from-control" placeholder="Text"></textarea><br>-->
+<!--        <input type="date" class="from-control"><br>-->
+<!--        <input type="time" class="from-control"><br>-->
+<button class="btn btn-success" type="submit">Gotovo</button>
+
+
+    </form>
+</div>
+{%endblock%}

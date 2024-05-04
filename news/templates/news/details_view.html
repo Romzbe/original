@@ -1,0 +1,16 @@
+{% extends 'popo/lox.html' %}
+
+{% block tit %}{{ article.title }}{%endblock%}
+
+{%block con%}
+<div class="features">
+    <h1>{{ article.title }}</h1>
+    <p>{{ article.date }}</p>
+   <p>{{ article.text }}</p>
+
+    <a href="{% url 'news-del' article.id%}" class="btn btn-danger"> Delite</a>
+    <a href="{% url 'news-update' article.id%}" class="btn btn-info"> Редактировать</a>
+
+
+</div>
+{%endblock%}

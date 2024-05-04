@@ -1,0 +1,22 @@
+{%extends 'popo/lox.html'%}
+
+{%block tit%}Новости на сайте{%endblock%}
+
+{%block con%}
+<div class="features">
+    <h1> Новости на сайте </h1>
+{% if news %}
+    {%for i in news%}
+        <div class="arelt arelt-warning">
+            <h3>{{i.title}}</h3>
+            <p>{{i.anons}}</p>
+            <a href="{% url 'news-detail' i.id %}" class="btn btn-warning">Подробнее</a>
+        </div>
+    {%endfor%}
+{%else%}
+    <p>У вас нет мозга</p>
+    {%endif%}
+
+</div>
+<button class="btn btn-danger">На страницу про нас</button>
+{%endblock%}

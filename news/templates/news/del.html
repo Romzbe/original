@@ -1,0 +1,15 @@
+{%extends 'popo/lox.html'%}
+
+{%block tit%}DELITE{%endblock%}
+
+{%block con%}
+<div class="features">
+    <h1> DELITE статью </h1>
+    <form method="post">
+        {% csrf_token %}
+<button class="btn btn-success" type="submit">Gotovo</button>
+
+
+    </form>
+</div>
+{%endblock%}
